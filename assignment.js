@@ -7,5 +7,3 @@ function kilometerToMeter(value) {
     var meter = value * 1000;
     return meter;
 }
-var result = kilometerToMeter(-234);
-console.log(result);
