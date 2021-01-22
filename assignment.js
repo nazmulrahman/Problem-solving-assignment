@@ -10,6 +10,29 @@ function kilometerToMeter(value) {
 
 
 
+//(2) budgetCalculator
+
+function budgetCalculator(watchAmount, mobileAmount, laptopAmount) {
+    if (watchAmount < 0 || mobileAmount < 0 || laptopAmount < 0) {
+        //convert negative number to absolute number
+        [watchAmount, mobileAmount, laptopAmount] = [Math.abs(watchAmount), Math.abs(mobileAmount), Math.abs(laptopAmount)];
+
+        console.log('You entered a negative value.Negative value has benn considered as positive value')
+    }
+    //detect float number and shows undefine
+    else if (watchAmount % 1 != 0 || mobileAmount % 1 != 0 || laptopAmount % 1 != 0) {
+        console.log('please enter a valid amount without float');
+        return;
+    }
+    var watchPrice = watchAmount * 50;
+    var mobilePrice = mobileAmount * 100;
+    var laptopPrice = laptopAmount * 500;
+    totalPrice = watchPrice + mobilePrice + laptopPrice;
+    return totalPrice;
+}
+
+
+
 //(3) hotelCost
 function hotelCost(days) {
     var rent = 0;
